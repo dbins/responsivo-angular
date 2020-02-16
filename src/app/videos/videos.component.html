@@ -1,0 +1,9 @@
+<app-header></app-header>
+<app-jumbotron titulo="Videos" descricao="Alguns exemplos de sistemas em ação!"></app-jumbotron>
+
+<div class="container">
+    <div class="row">
+      <app-video-item  class="col-md-6" id={{item.id}} image={{item.image}} caption={{item.caption}} description={{item.description}} *ngFor="let item of items"></app-video-item>
+    </div>
+</div>
+<app-footer></app-footer>

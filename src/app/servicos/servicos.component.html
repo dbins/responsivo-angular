@@ -1,0 +1,27 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/servicos.css">
+<app-header></app-header>
+<app-jumbotron titulo="Serviços" descricao="Confira o que eu posso fazer por você"></app-jumbotron>
+	<div class="container">
+		<section>
+			<div class="container">
+
+				<div class="row mbr-justify-content-center">
+
+					<div class="col-lg-6 mbr-col-md-10"  *ngFor="let item of items">
+						<div class="wrap">
+							<div class="ico-wrap">
+								<span class="mbr-iconfont {{item.icon}}"></span>
+							</div>
+							<div class="text-wrap vcenter">
+								<h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">{{item.caption}}</h2>
+								<p class="mbr-fonts-style text1 mbr-text display-6">{{item.description}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+		 <app-footer></app-footer>
+	</div>

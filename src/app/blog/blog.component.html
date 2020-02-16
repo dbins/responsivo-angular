@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<div class="container">
+	<section id="conteudo">
+    <app-blog-header></app-blog-header>
+		<div class="row">
+			<app-blog-item class="col-md-6" id={{item.id}} image={{item.image}} category={{item.category}} caption={{item.caption}} description={{item.description}} *ngFor="let item of items"></app-blog-item>
+		</div>
+	</section>
+</div>
+<app-footer></app-footer>

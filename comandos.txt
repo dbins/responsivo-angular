@@ -1,0 +1,37 @@
+https://stackblitz.com
+
+ng new responsivo
+npm install bootstrap
+npm install font-awesome
+
+ng serve ou npm run start
+
+ng g c home
+ng g c aplicativos
+ng g c blog
+ng g c contato
+ng g c curriculo
+ng g c ferramentas
+ng g c portfolio
+ng g c servicos
+ng g c videos
+ng g c shared/components/footer
+ng g c shared/components/header
+
+ng g c shared/components/portfolio-item
+ng g c shared/components/jumbotron
+ng g c shared/components/banners
+ng g c shared/components/video-item
+ng g c shared/components/blog-item
+ng g c shared/components/blog-header
+
+ng g i shared/models/portfolio
+ng g i shared/models/videos
+ng g i shared/models/ferramentas
+ng g i shared/models/aplicativos
+ng g i shared/models/blog
+ng g i shared/models/contato
+ng g i shared/models/habilidades
+ng g i shared/models/servicos
+
+ng g s core/filmes.service --nospec

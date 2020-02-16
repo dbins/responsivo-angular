@@ -1,0 +1,66 @@
+<app-header></app-header>
+	<div class="container">
+		<div class="py-5 text-center">
+			<h2>Contato</h2>
+			<p class="lead">Precisa de um site ou aplicativo? Entre em contato comigo!</p>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<form class="needs-validation" autocomplete="off" novalidate [formGroup]="cadastro" (ngSubmit)="submit()" (ngReset)="reiniciarForm()">
+
+					<div class="mb-3">
+						<label for="nome">Nome</label>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">N</span>
+							</div>
+							<input type="text" class="form-control" id="nome" name="nome" placeholder="nome"
+								required="" formControlName="nome">
+							<div *ngIf="validacao.hasErrorValidar(formControl('nome'), 'required')" class="invalid-feedback" style="width: 100%;">
+								Seu nome é obrigatório.
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="email">E-mail</label>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">@</span>
+							</div>
+							<input type="text" class="form-control" id="email" name="email" placeholder="email"
+								required="" formControlName="email">
+							<div *ngIf="validacao.hasErrorValidar(formControl('email'), 'required')" class="invalid-feedback" style="width: 100%;">
+								Seu e-mail é obrigatório.
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="telefone">Telefone</label>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">T</span>
+							</div>
+							<input type="text" class="form-control" id="telefone" name="telefone" placeholder="telefone"
+								required="" formControlName="telefone">
+							<div *ngIf="validacao.hasErrorValidar(formControl('telefone'), 'required')" class="invalid-feedback" style="width: 100%;">
+								Por favor informe o seu telefone.
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="mensagem">Mensagem</label>
+						<textarea class="form-control" id="mensagem" name="mensagem" rows="10" formControlName="mensagem"></textarea>
+					</div>
+
+					<hr class="mb-4">
+					<button class="btn btn-primary btn-lg btn-block" type="submit">Enviar mensagem</button>
+          <button class="btn btn-secondary btn-lg btn-block" type="reset">Apagar</button>
+				</form>
+			</div>
+		</div>
+</div>
+<app-footer></app-footer>
